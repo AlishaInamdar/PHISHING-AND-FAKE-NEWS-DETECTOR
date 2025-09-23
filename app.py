@@ -1,4 +1,4 @@
-import os
+
 from flask import Flask, request, jsonify, render_template # pyright: ignore[reportMissingImports]
 from joblib import load # pyright: ignore[reportMissingImports]
 from urllib.parse import urlparse
@@ -138,6 +138,7 @@ def check_fake_news(text):
 # ----------------------------
 # Run Flask App
 # ----------------------------
-if __name__ == '__main__':
+if __name__ == "__main__":
+    import os
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
